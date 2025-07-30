@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Banking UI</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #eae7ed, #e2e4e8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .bank-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .balance-box {
+      background: #f1f4f9;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: not-allowed; /* since it's UI only */
+      transition: transform 0.2s ease;
+    }
+
+    .btn-deposit {
+      background: #28a745;
+      color: #fff;
+    }
+
+    .btn-withdraw {
+      background: #dc3545;
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    
+    @media (max-width: 500px) {
+      .btn-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bank-container">
+    <div class="balance-box">
+      💰 Balance: $5,000
+    </div>
+    <div class="btn-container">
+      <button class="btn btn-deposit">Deposit</button>
+      <button class="btn btn-withdraw">Withdraw</button>
+    </div>
+  </div>
+</body>
+</html>
